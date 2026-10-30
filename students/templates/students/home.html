@@ -1,0 +1,56 @@
+
+{% extends "students/base.html" %}
+
+{% block title %}Home - My Website{% endblock %}
+
+{% block content %}
+    <h1>Student Profile</h1>
+    <p>Name: {{ username }}</p>
+    <p>Age: {{ user_age }}</p>
+    <p>Marks: {{ marks }}</p>
+
+    <h2>Age Category</h2>
+    {% if user_age >= 18 %}
+        <p>Adult</p>
+    {% else %}
+        <p>Minor</p>
+    {% endif %}
+
+    <h2>Exam Results</h2>
+    {% if marks >= 75 %}
+        <p>Excellent</p>
+    {% elif marks >= 60 %}
+        <p>Good</p>
+    {% elif marks >= 45 %}
+        <p>Need improvement</p>
+    {% elif marks >= 25 %}
+        <p>Fail</p>
+    {% else %}
+        <p>Below passing range</p>
+    {% endif %}
+
+    <h2>Grade System</h2>
+    {% if marks >= 75 %}
+        <p>Grade is: A</p>
+    {% elif marks >= 65 %}
+        <p>Grade is: B</p>
+    {% elif marks >= 50 %}
+        <p>Grade is: C</p>
+    {% else %}
+        <p>Grade is: Fail</p>
+    {% endif %}
+
+    <h2>Driving Age</h2>
+    {% if user_age >= 18 %}
+        <p>Eligible to Apply</p>
+    {% else %}
+        <p>Not Eligible yet.</p>
+    {% endif %}
+
+    <h2>Membership</h2>
+    {% if membership %}
+        <p>Welcome Member</p>
+    {% else %}
+        <p>Please Register</p>
+    {% endif %}
+{% endblock %}

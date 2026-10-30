@@ -1,0 +1,38 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #8181ec;
+    color: #333232;
+}
+
+.navbar {
+    background-color: #163a63;
+    padding: 18px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-right: 24px;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+h1 {
+    color: #163a63;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #163a63;
+    color: white;
+}

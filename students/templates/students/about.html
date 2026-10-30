@@ -1,0 +1,23 @@
+{% extends "students/base.html" %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}About Us - My Website{% endblock %}</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Welcome to About Us Page</h1>
+    <p>This is a about us page</p>
+
+    <h2>Subject List</h2>
+    {% for subject in subjects %}
+        <li>{{forloop.counter}}. {{subject}}</li>
+    {% empty %}
+        <li>subjects are unavailable.</li>
+    {% endfor %}
+    {%endblock%}
+</body>
+</html>
