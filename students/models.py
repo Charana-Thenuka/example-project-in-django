@@ -39,10 +39,10 @@ class Book(models.Model):
 class Employee(models.Model):
     employee_name = models.CharField(max_length=50);
     is_head_office_employee = models.BooleanField(default=True);
-    id_branch_employee = models.BooleanField(default=False);
+    is_branch_employee = models.BooleanField(default=False);
     epf_number = models.CharField(max_length=6);
     extension_number = models.CharField(max_length=15);
     created_at = models.DateTimeField(auto_now_add=True);
 
     def __str__(self):
-        return self.epf_number;
+        return self.employee_name;
