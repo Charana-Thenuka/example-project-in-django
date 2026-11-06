@@ -42,6 +42,7 @@ class Employee(models.Model):
     is_branch_employee = models.BooleanField(default=False);
     epf_number = models.CharField(max_length=6);
     extension_number = models.CharField(max_length=15);
+    salary = models.IntegerField(null=True);
     created_at = models.DateTimeField(auto_now_add=True);
 
     def __str__(self):
