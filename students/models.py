@@ -54,6 +54,7 @@ class Vehical(models.Model):
     number_of_wheels = models.IntegerField();
     decription = models.TextField();
     year = models.DateField();
+    made_in = models.CharField(null=True);
     created_at = models.DateTimeField(auto_now_add=True);
 
     def __str__(self):
