@@ -48,4 +48,13 @@ class Employee(models.Model):
     def __str__(self):
         return self.employee_name;
 
+class Vehical(models.Model):
+    vehical_type = models.CharField(max_length=30);
+    brand = models.CharField(max_length=20);
+    number_of_wheels = models.IntegerField();
+    decription = models.TextField();
+    year = models.DateField();
+    created_at = models.DateTimeField(auto_now_add=True);
 
+    def __str__(self):
+        return self.vehical_type;
